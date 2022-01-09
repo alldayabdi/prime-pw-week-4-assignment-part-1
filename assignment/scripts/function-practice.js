@@ -40,9 +40,15 @@ console.log(multiplyThree(2, 3, 4));
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
   }
-    return;
+  else if (number <0) {
+    return false;
+  }
+else { number === 0
+  return false;
+
+}
 }
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
@@ -53,16 +59,35 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-function getLast( array ) {
+array = ['1' , '2' , '3'];
+function getLast( lastItem ) {
+  lastItem = [array.pop()];
+  return lastItem;
+
 
 }
+console.log(getLast());
+
+
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
+let favoriteFood = ['chicken', 'pasta' , 'soup', 'burgers']
 function find( value, array ){
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      return true;
+
+    }
+    return false;
+  }
 
 }
+console.log('is chicken one of my favorite favorite foods', find('chicken', favoriteFood));
+console.log('is pasta one of my favorite favorite foods', find('pasta', favoriteFood));
+console.log('is soup one of my favorite favorite foods', find('soup', favoriteFood));
+console.log('are burgers one of my favorite favorite foods', find('burgers', favoriteFood));
 
 // ----------------------
 // Stretch Goals
